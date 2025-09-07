@@ -23,7 +23,7 @@ export default function Navbar() {
           <li className="hover:text-red-600 cursor-pointer">Gallery</li>
           <li className="hover:text-red-600 cursor-pointer">Catering Form</li>
           <li className="hover:text-red-600 cursor-pointer">Roaming Cannoli</li>
-          <li className="hover:text-red-600 cursor-pointer">Contact US</li>
+          <li className="hover:text-red-600 cursor-pointer">Pizzaiolo Setup</li>
         </ul>
 
         {/* Right Section */}
@@ -31,7 +31,7 @@ export default function Navbar() {
           <button className="px-4 py-2 rounded-full font-semibold bg-red-600 text-white border-2 border-red-600 hover:bg-transparent hover:border-white hover:text-white
           transition-colors duration-400 ease-in-out
           focus:outline-none">
-            BOOK A TABLE
+            Contact US
           </button>
         </div>
       </nav>
