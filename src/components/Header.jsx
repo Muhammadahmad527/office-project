@@ -11,28 +11,26 @@ export default function Navbar() {
           <img
             src={logo} // put your logo in public folder
             alt="Pizza House"
-            className="w-24 h-24"
+            className="w-26 h-26 transition-transform duration-700 ease-in-out
+    hover:rotate-[360deg]"
           />
         </div>
 
         {/* Center Nav Links */}
         <ul className="hidden md:flex space-x-6 text-white font-medium">
-          <li className="hover:text-yellow-400 cursor-pointer">Home</li>
-          <li className="hover:text-yellow-400 cursor-pointer">Pizza Catering Form</li>
-          <li className="hover:text-yellow-400 cursor-pointer">Gallery</li>
-          <li className="hover:text-yellow-400 cursor-pointer">Catering Form</li>
-          <li className="hover:text-yellow-400 cursor-pointer">Roaming Cannoli</li>
-          <li className="hover:text-yellow-400 cursor-pointer">Contact US</li>
+          <li className="hover:text-red-600 cursor-pointer">Home</li>
+          <li className="hover:text-red-600 cursor-pointer">Pizza Catering Form</li>
+          <li className="hover:text-red-600 cursor-pointer">Gallery</li>
+          <li className="hover:text-red-600 cursor-pointer">Catering Form</li>
+          <li className="hover:text-red-600 cursor-pointer">Roaming Cannoli</li>
+          <li className="hover:text-red-600 cursor-pointer">Contact US</li>
         </ul>
 
         {/* Right Section */}
         <div className="flex items-center space-x-6 text-white font-medium">
-          <button className="px-4 py-2 rounded-full font-semibold
-    bg-red-600 text-white
-    border-2 border-red-600
-    hover:bg-transparent hover:border-white hover:text-white
-    transition-colors duration-200 ease-in-out
-    focus:outline-none">
+          <button className="px-4 py-2 rounded-full font-semibold bg-red-600 text-white border-2 border-red-600 hover:bg-transparent hover:border-white hover:text-white
+          transition-colors duration-400 ease-in-out
+          focus:outline-none">
             BOOK A TABLE
           </button>
         </div>
