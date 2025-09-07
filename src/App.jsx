@@ -1,14 +1,14 @@
-
+import Header from '../src/components/header.jsx'
+import Hero from '../src/components/Hero.jsx'
 import './App.css'
 
-function App() {
 
+function App() {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
-    </div>
+    <>
+      <Header />
+      <Hero />
+    </>
   )
 }
 
