@@ -1,4 +1,4 @@
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+// import { FaArrowLeft } from "react-icons/fa";
 
 const products = [
   {
@@ -8,7 +8,7 @@ const products = [
       "Vitae enim vel nisi feugiat ultricies. Phasellus hendrerit pharetra posuere.",
     price: 17.8,
     image:
-      "/newpizza.png", // replace with your image
+      "/delpiz.png", // replace with your image
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const products = [
       "Integer vitae enim vel nisi feugiat ultricies. Phasellus hendrerit pharetra posuere.",
     price: 19.0,
     image:
-      "newpizza.png", // replace with your image
+      "delpiz.png", // replace with your image
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const products = [
       "Integer vitae enim vel nisi feugiat ultricies. Phasellus hendrerit pharetra posuere.",
     price: 14.3,
     image:
-      "newpizza.png", // replace with your pasta image
+      "delpiz.png", // replace with your pasta image
   },
 ];
 
@@ -41,9 +41,9 @@ const PizzaSection = () => {
 
       <div className="flex items-center justify-center gap-6">
         {/* Left arrow */}
-        <button className="text-yellow-500 text-2xl hover:text-yellow-400">
+        {/* <button className="text-yellow-500 text-2xl hover:text-yellow-400">
           <FaArrowLeft />
-        </button>
+        </button> */}
 
         {/* Products */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -57,9 +57,11 @@ const PizzaSection = () => {
               <h3 className="text-xl font-semibold text-yellow-500 mt-4">
                 {item.name}
               </h3>
-              <p className="text-gray-200 mt-2 text-sm px-4">{item.description}</p>
+              <p className="text-gray-200 mt-2 text-sm px-4 max-w-xs mx-auto text-center leading-relaxed break-words">
+  {item.description}
+</p>
               <p className="text-white font-bold mt-2">${item.price.toFixed(2)}</p>
-              <button className="mt-4 bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full shadow-lg">
+              <button className="mt-4 bg-red-600 border border-transparent hover:bg-transparent hover:border-white text-white px-6 py-2 rounded-full shadow-lg duration-300 ease-in-out">
                 SELECT OPTIONS
               </button>
             </div>
@@ -67,9 +69,9 @@ const PizzaSection = () => {
         </div>
 
         {/* Right arrow */}
-        <button className="text-yellow-500 text-2xl hover:text-yellow-400">
+        {/* <button className="text-yellow-500 text-2xl hover:text-yellow-400">
           <FaArrowRight />
-        </button>
+        </button> */}
       </div>
     </section>
   );

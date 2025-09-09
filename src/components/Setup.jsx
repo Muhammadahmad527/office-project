@@ -1,6 +1,6 @@
 const Setup = () => {
   return (
-    <div>
+    <div className="px-[70px]">
       <section className="text-gray-600 body-font">
         <h1 className="text-4xl font-bold text-center text-gray-900 mb-12">
           How Pizzaiolo Work
@@ -8,20 +8,20 @@ const Setup = () => {
         <div className="container px-5 py-24 mx-auto flex flex-wrap">
           <div className="flex flex-wrap w-full">
             <div className="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
-              
+
               {/* Step 1 */}
               <div className="flex relative pb-12">
                 <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
                   <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
                 </div>
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-yellow-500 inline-flex items-center justify-center text-white relative z-10">
-                  <svg 
-                    fill="none" 
-                    stroke="currentColor" 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth="2" 
-                    className="w-5 h-5" 
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    className="w-5 h-5"
                     viewBox="0 0 24 24"
                   >
                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
@@ -39,13 +39,13 @@ const Setup = () => {
                   <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
                 </div>
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-yellow-500 inline-flex items-center justify-center text-white relative z-10">
-                  <svg 
-                    fill="none" 
-                    stroke="currentColor" 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth="2" 
-                    className="w-5 h-5" 
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    className="w-5 h-5"
                     viewBox="0 0 24 24"
                   >
                     <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
@@ -63,13 +63,13 @@ const Setup = () => {
                   <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
                 </div>
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-yellow-500 inline-flex items-center justify-center text-white relative z-10">
-                  <svg 
-                    fill="none" 
-                    stroke="currentColor" 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth="2" 
-                    className="w-5 h-5" 
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    className="w-5 h-5"
                     viewBox="0 0 24 24"
                   >
                     <circle cx="12" cy="5" r="3"></circle>
@@ -88,13 +88,13 @@ const Setup = () => {
                   <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
                 </div>
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-yellow-500 inline-flex items-center justify-center text-white relative z-10">
-                  <svg 
-                    fill="none" 
-                    stroke="currentColor" 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth="2" 
-                    className="w-5 h-5" 
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    className="w-5 h-5"
                     viewBox="0 0 24 24"
                   >
                     <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
@@ -107,20 +107,20 @@ const Setup = () => {
                 </div>
               </div>
 
-              
+
 
             </div>
 
             {/* Right-side image */}
-          {/* Right-side video */}
-<video
-  className="lg:w-[400px] md:w-[400px] w-[300px] lg:h-[600px] md:h-[300px] h-[220px] object-cover object-center rounded-lg md:mt-0 mt-12 ml-auto"
-  src="/pizza.mp4"
-  controls
-  autoPlay
-  loop
-  muted
-/>
+            {/* Right-side video */}
+            <video
+              className="lg:w-[400px] md:w-[400px] w-[300px] lg:h-[600px] md:h-[300px] h-[220px] object-cover object-center rounded-lg md:mt-0 mt-12 ml-auto"
+              src="/pizza.mp4"
+              controls
+              autoPlay
+              loop
+              muted
+            />
 
 
 

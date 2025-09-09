@@ -5,3 +5,40 @@ body{
     overflow-y: auto;
     overflow-x: hidden;
 }
+
+@keyframes toss {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-120px) rotate(30deg);
+  }
+  50% {
+    transform: translateY(-160px) rotate(60deg);
+  }
+  75% {
+    transform: translateY(-120px) rotate(90deg);
+  }
+}
+
+@keyframes armLeft {
+  0%, 100% { transform: rotate(10deg); }
+  50% { transform: rotate(-20deg); }
+}
+
+@keyframes armRight {
+  0%, 100% { transform: rotate(-10deg); }
+  50% { transform: rotate(20deg); }
+}
+
+.animate-toss {
+  animation: toss 1.6s infinite ease-in-out;
+}
+
+.animate-arm-left {
+  animation: armLeft 1.6s infinite ease-in-out;
+}
+
+.animate-arm-right {
+  animation: armRight 1.6s infinite ease-in-out;
+}
