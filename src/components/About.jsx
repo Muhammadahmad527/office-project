@@ -3,6 +3,7 @@ import { FaPizzaSlice, FaStar } from "react-icons/fa";
 
 const About = () => {
   return (
+    
     <div className="flex flex-row items-center justify-between px-32 py-32">
       
 
