@@ -1,54 +1,86 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-export default function PizzaioloLoader({ onFinish, duration = 2000 }) {
+export default function PizzaioloLoader({ onFinish, duration = 3000 }) {
   const [visible, setVisible] = useState(true);
+  const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
+    // Start fade-out 0.5s before actual removal
+    const fadeTimer = setTimeout(() => {
+      setFadeOut(true);
+    }, duration - 500);
+
     const timer = setTimeout(() => {
       setVisible(false);
       if (onFinish) onFinish();
     }, duration);
-    return () => clearTimeout(timer);
+
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(fadeTimer);
+    };
   }, [duration, onFinish]);
 
   if (!visible) return null;
 
+  const word = "Pizzaiolo";
+
   return (
-    <div className="fixed inset-0 flex flex-col items-center justify-center bg-gradient-to-b from-gray-900 to-black z-50">
-      {/* Chef */}
-      <div className="relative flex flex-col items-center">
-        {/* Hat */}
-        <div className="w-20 h-12 bg-white rounded-t-full shadow-md" />
-        {/* Face */}
-        <div className="w-16 h-16 bg-amber-200 rounded-full flex items-center justify-center relative">
-          {/* Mustache */}
-          <div className="absolute bottom-2 flex space-x-1">
-            <div className="w-4 h-2 bg-black rounded-full rotate-[-20deg]" />
-            <div className="w-4 h-2 bg-black rounded-full rotate-[20deg]" />
-          </div>
-        </div>
-        {/* Body */}
-        <div className="w-14 h-20 bg-red-600 rounded-b-full relative">
-          {/* Arms */}
-          <div className="absolute -top-2 -left-10 w-10 h-4 bg-amber-200 rounded-full animate-arm-left origin-right" />
-          <div className="absolute -top-2 -right-10 w-10 h-4 bg-amber-200 rounded-full animate-arm-right origin-left" />
-        </div>
-      </div>
+    <div
+      className={`fixed inset-0 flex items-center justify-center bg-gradient-to-b from-gray-900 to-black z-50 transition-opacity duration-500 ${
+        fadeOut ? "opacity-0" : "opacity-100"
+      }`}
+    >
+      <h1 className="text-6xl md:text-8xl font-extrabold tracking-widest text-yellow-400 flex space-x-1">
+        {word.split("").map((char, idx) => {
+          let anim = "";
 
-      {/* Pizza tossing */}
-      <div className="relative mt-10">
-        <div className="w-24 h-24 rounded-full bg-yellow-400 border-4 border-orange-600 animate-toss relative">
-          {/* Pepperoni */}
-          <div className="w-4 h-4 bg-red-700 rounded-full absolute top-4 left-6" />
-          <div className="w-3 h-3 bg-red-700 rounded-full absolute bottom-6 right-6" />
-          <div className="w-3 h-3 bg-red-700 rounded-full absolute top-8 right-8" />
-        </div>
-      </div>
+          if (idx < 4) anim = "from-left"; // Pizz
+          else if (idx === 4) anim = "from-top-mirror"; // a
+          else anim = "from-right"; // iolo
 
-      {/* Text */}
-      <p className="mt-10 text-white text-2xl font-semibold tracking-wide animate-pulse">
-        Welcome to Pizzaiolo...
-      </p>
+          return (
+            <span
+              key={idx}
+              className={`letter ${anim}`}
+              style={{ animationDelay: `${idx * 0.25}s` }}
+            >
+              {char}
+            </span>
+          );
+        })}
+      </h1>
+
+      <style>{`
+        .letter {
+          display: inline-block;
+          opacity: 0;
+        }
+
+        @keyframes fromLeft {
+          0% { transform: translateX(-120px); opacity: 0; }
+          60% { transform: translateX(15px); opacity: 1; }
+          80% { transform: translateX(-8px); }
+          100% { transform: translateX(0); }
+        }
+        .from-left { animation: fromLeft 1s ease forwards; }
+
+        @keyframes fromRight {
+          0% { transform: translateX(120px); opacity: 0; }
+          60% { transform: translateX(-15px); opacity: 1; }
+          80% { transform: translateX(8px); }
+          100% { transform: translateX(0); }
+        }
+        .from-right { animation: fromRight 1s ease forwards; }
+
+        @keyframes fromTopMirror {
+          0% { transform: translateY(-120px) scaleX(-1); opacity: 0; }
+          50% { transform: translateY(30px) scaleX(-1); opacity: 1; }
+          80% { transform: translateY(-10px) scaleX(1); }
+          100% { transform: translateY(0) scaleX(1); }
+        }
+        .from-top-mirror { animation: fromTopMirror 1.2s ease forwards; }
+      `}</style>
     </div>
   );
 }

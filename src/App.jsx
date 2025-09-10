@@ -5,6 +5,9 @@ import Setup from '../src/components/Setup.jsx'
 import CustomCursor from '../src/components/Cursor.jsx'
 import PizzaSection from '../src/components/PizzaSection.jsx'
 import Loader from '../src/components/Loader.jsx'
+import Story from '../src/components/Story.jsx'
+import Review from '../src/components/Review.jsx'
+import Social from '../src/components/Social.jsx'
 import './App.css'
 
 
@@ -19,6 +22,9 @@ function App() {
       <CustomCursor />
       <PizzaSection />
       <Loader />
+      <Story />
+      <Review />
+      <Social />
     </>
   )
 }
