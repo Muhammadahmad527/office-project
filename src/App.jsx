@@ -8,6 +8,8 @@ import Loader from '../src/components/Loader.jsx'
 import Story from '../src/components/Story.jsx'
 import Review from '../src/components/Review.jsx'
 import Social from '../src/components/Social.jsx'
+import Footer from '../src/components/Footer.jsx'
+import Top from '../src/components/Top.jsx'
 import './App.css'
 
 
@@ -25,6 +27,8 @@ function App() {
       <Story />
       <Review />
       <Social />
+      <Footer />
+      <Top />
     </>
   )
 }

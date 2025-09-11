@@ -6,7 +6,7 @@ const products = [
     name: "Pepperoni",
     description:
       "Vitae enim vel nisi feugiat ultricies. Phasellus hendrerit pharetra posuere.",
-    price: 17.8,
+    // price: 17.8,
     image:
       "/delpiz.png", // replace with your image
   },
@@ -15,7 +15,7 @@ const products = [
     name: "Glute-Free Pizza",
     description:
       "Integer vitae enim vel nisi feugiat ultricies. Phasellus hendrerit pharetra posuere.",
-    price: 19.0,
+    // price: 19.0,
     image:
       "delpiz.png", // replace with your image
   },
@@ -24,7 +24,7 @@ const products = [
     name: "Gluten-Free Pasta",
     description:
       "Integer vitae enim vel nisi feugiat ultricies. Phasellus hendrerit pharetra posuere.",
-    price: 14.3,
+    // price: 14.3,
     image:
       "delpiz.png", // replace with your pasta image
   },
@@ -60,7 +60,7 @@ const PizzaSection = () => {
               <p className="text-gray-200 mt-2 text-sm px-4 max-w-xs mx-auto text-center leading-relaxed break-words">
   {item.description}
 </p>
-              <p className="text-white font-bold mt-2">${item.price.toFixed(2)}</p>
+              {/* <p className="text-white font-bold mt-2">${item.price.toFixed(2)}</p> */}
               <button className="mt-4 bg-red-600 border border-transparent hover:bg-transparent hover:border-white text-white px-6 py-2 rounded-full shadow-lg duration-300 ease-in-out">
                 SELECT OPTIONS
               </button>

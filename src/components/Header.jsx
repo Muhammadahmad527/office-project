@@ -1,18 +1,32 @@
-import logo from '../images/logo.png'
+import { useEffect, useState } from "react";
+import logo from "../images/logo.png";
 
-// Navbar.jsx
 export default function Navbar() {
-  return (
-    <header className="absolute top-0 left-0 w-full z-50">
-      <nav className="flex items-center justify-between px-8 py-4">
+  const [scrolled, setScrolled] = useState(false);
 
-        {/* Logo on the Left */}
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <header
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+        scrolled ? "bg-black shadow-md py-2" : "bg-transparent py-4"
+      }`}
+    >
+      <nav className="flex items-center justify-between px-8 transition-all duration-500">
+        {/* Logo */}
         <div>
           <img
-            src={logo} // put your logo in public folder
+            src={logo}
             alt="Pizza House"
-            className="w-26 h-26 transition-transform duration-700 ease-in-out
-    hover:rotate-[360deg]"
+            className={`transition-all duration-500 ease-in-out hover:rotate-[360deg] ${
+              scrolled ? "w-16 h-16" : "w-24 h-24"
+            }`}
           />
         </div>
 
@@ -28,9 +42,7 @@ export default function Navbar() {
 
         {/* Right Section */}
         <div className="flex items-center space-x-6 text-white font-medium">
-          <button className="px-4 py-2 rounded-full font-semibold bg-red-600 text-white border-2 border-red-600 hover:bg-transparent hover:border-white hover:text-white
-          transition-colors duration-400 ease-in-out
-          focus:outline-none">
+          <button className="px-4 py-2 rounded-full font-semibold bg-red-600 text-white border-2 border-red-600 hover:bg-transparent hover:border-white hover:text-white transition-colors duration-400 ease-in-out focus:outline-none">
             Contact US
           </button>
         </div>
