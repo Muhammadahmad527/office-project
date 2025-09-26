@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 // Hero.jsx
 export default function Hero() {
-  const images = ["/img.jpg", "/img2.jpg", "/img3.jpg"]; // public/
+  const images = ["/newcon.png", "/img.jpg", "/img2.jpg"]; // public/
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {

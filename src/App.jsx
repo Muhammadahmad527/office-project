@@ -3,7 +3,8 @@ import Hero from '../src/components/Hero.jsx'
 import About from '../src/components/About.jsx'
 import Setup from '../src/components/Setup.jsx'
 import CustomCursor from '../src/components/Cursor.jsx'
-import PizzaSection from '../src/components/PizzaSection.jsx'
+// import PizzaSection from '../src/components/PizzaSection.jsx'
+import Gallery from '../src/components/Gallery.jsx'
 import Loader from '../src/components/Loader.jsx'
 import Story from '../src/components/Story.jsx'
 import Review from '../src/components/Review.jsx'
@@ -22,7 +23,8 @@ function App() {
       <About />
       <Setup />
       <CustomCursor />
-      <PizzaSection />
+      {/* <PizzaSection /> */}
+      <Gallery />
       <Loader />
       <Story />
       <Review />
