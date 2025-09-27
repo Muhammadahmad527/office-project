@@ -13,49 +13,53 @@ export default function OurStory() {
 
           {/* Heading */}
           <h2 className="text-4xl font-bold text-gray-800 mb-6 text-center md:text-left">
-            Our Story
+            Our Journey
           </h2>
 
           {/* Years navigation */}
-          <div className="flex flex-wrap gap-3 mb-6">
-            <button className="px-4 py-2 rounded-full bg-red-600 text-white font-semibold shadow">
-              1990
-            </button>
-            <button className="px-4 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-gray-200">
-              1995
-            </button>
-            <button className="px-4 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-gray-200">
-              2001
-            </button>
-            <button className="px-4 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-gray-200">
-              2005
-            </button>
-            <button className="px-4 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-gray-200">
-              2010
-            </button>
-          </div>
+<div className="flex flex-wrap gap-3 mb-6 justify-center md:justify-start">
+  <button className="px-4 py-2 rounded-full bg-red-600 text-white font-semibold shadow">
+    2015
+  </button>
+  <button className="px-4 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-gray-200">
+    2018
+  </button>
+  <button className="px-4 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-gray-200">
+    2020
+  </button>
+  <button className="px-4 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-gray-200">
+    2022
+  </button>
+  <button className="px-4 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-gray-200">
+    2025
+  </button>
+</div>
+
 
           {/* Story text */}
-          <p className="text-gray-600 leading-relaxed mb-6">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam.
-            Ex ea commodo consequatuis aute irure. Dolor in reprehenderit in voluptate
-            velit esse cillum dolore eu fugiat nulla pariatur.
+          <p className="text-gray-600 leading-relaxed mb-6 text-center md:text-left">
+            At Pizzaiolo, we bring the true taste of Italy to your table with every slice.
+            Our passion for crafting authentic, wood-fired pizzas using the freshest
+            ingredients sets us apart. Whether you’re craving a classic Margherita or a
+            bold new flavor, every pizza is made with love, tradition, and a dedication
+            to quality that you can taste in every bite.
           </p>
 
+
           {/* Read more */}
-          <a
-            href="#"
-            className="text-red-600 font-semibold tracking-wider hover:underline"
-          >
-            READ MORE
-          </a>
+<a
+  href="#"
+  className="block text-red-600 font-semibold tracking-wider hover:underline text-center md:text-left"
+>
+  READ MORE
+</a>
+
         </div>
 
         {/* Right side - image */}
         <div className="flex justify-center">
           <img
-            src="/pic.jpg"
+            src="/journey.jpg"
             alt="Pizza"
             className="rounded-lg shadow-lg w-full max-w-md"
           />

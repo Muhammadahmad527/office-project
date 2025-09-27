@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 // Hero.jsx
 export default function Hero() {
-  const images = ["/newcon.png", "/img.jpg", "/img2.jpg"]; // public/
+  const images = ["/container.jpg", "/img.jpg", "/img2.jpg"]; // public/
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -28,7 +28,6 @@ export default function Hero() {
               key={idx}
               className="w-screen flex-shrink-0 h-full flex items-center justify-center bg-black"
             >
-              {/* object-contain prevents zoom/crop and centers the image */}
               <img
                 src={src}
                 alt={`slide-${idx}`}
@@ -43,18 +42,23 @@ export default function Hero() {
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/50 z-10"></div>
 
-      {/* Text Content (unchanged) */}
+      {/* Text Content */}
       <div className="relative z-20 flex flex-col items-center justify-center h-full text-center text-white">
-        <h3 className="text-yellow-400 text-2xl italic mb-4">
+        {/* h3 responsive */}
+        <h3 className="text-lg sm:text-xl md:text-2xl italic mb-4 text-yellow-400">
           Authentic Italian Woodfire Pizza
         </h3>
-        <h1 className="text-5xl md:text-7xl font-bold">
+
+        {/* Main Heading responsive */}
+        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold">
           Pizzaiolo Woodfire Pizza
         </h1>
-        <h1 className="text-5xl md:text-3xl text-gray-300 pt-8">
+
+        {/* Phone Number responsive */}
+        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-300 pt-8">
           0406 858 124
         </h1>
-       
+
         {/* Order Online Button */}
         <button className="mt-8 px-4 py-2 rounded-full font-semibold bg-red-600 text-white border-2 border-red-600 hover:bg-transparent hover:border-white hover:text-white transition-colors duration-400 ease-in-out focus:outline-none">
           ORDER ONLINE
