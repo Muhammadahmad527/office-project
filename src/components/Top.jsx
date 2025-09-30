@@ -3,11 +3,23 @@ import { FaArrowUp } from "react-icons/fa";
 
 export default function Top() {
   const [isVisible, setIsVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
-  // Show button when user scrolls down
+  useEffect(() => {
+    // Detect screen size
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 520);
+    };
+
+    handleResize(); // run on load
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Show button when user scrolls down & screen is wider than 520px
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.scrollY > 50) {   // 👈 same as Navbar
+      if (window.scrollY > 50 && !isMobile) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
@@ -16,14 +28,11 @@ export default function Top() {
 
     window.addEventListener("scroll", toggleVisibility);
     return () => window.removeEventListener("scroll", toggleVisibility);
-  }, []);
+  }, [isMobile]);
 
   // Scroll to top smoothly
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (

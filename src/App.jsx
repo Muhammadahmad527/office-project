@@ -4,7 +4,7 @@ import About from '../src/components/About.jsx'
 import Setup from '../src/components/Setup.jsx'
 import CustomCursor from '../src/components/Cursor.jsx'
 import Gallery from '../src/components/Gallery.jsx'
-import Loader from '../src/components/Loader.jsx'
+// import Loader from '../src/components/Loader.jsx'
 import Story from '../src/components/Story.jsx'
 import Review from '../src/components/Review.jsx'
 import Social from '../src/components/Social.jsx'
@@ -24,7 +24,7 @@ function App() {
       <Setup />
       <CustomCursor />
       <Gallery />
-      <Loader />
+      {/* <Loader /> */}
       <Story />
       <Review />
       <Social />

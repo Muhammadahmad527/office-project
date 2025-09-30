@@ -7,12 +7,21 @@ const About = () => {
       <div className="w-full md:w-1/2 flex justify-center md:justify-end">
         <video
           src="/video.mp4"
-          className="lg:w-[420px] md:w-[400px] w-[320px] lg:h-[620px] md:h-[320px] h-[240px] object-cover object-center rounded-lg"
+          className="
+    w-full 
+    max-w-[260px]   /* small screens → narrower → smaller height */
+    md:max-w-[340px] /* medium screens → a bit larger */
+    lg:max-w-[420px] /* large screens → full size */
+    h-auto 
+    rounded-lg 
+    bg-black
+  "
           controls
           autoPlay
           loop
           muted
         />
+
       </div>
 
       {/* Right side content */}
