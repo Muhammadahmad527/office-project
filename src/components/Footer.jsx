@@ -28,7 +28,7 @@ const Footer = () => {
         {/* Paragraph */}
         <p className="text-white text-lg mt-4 px-4">
           <span className="hover:text-yellow-500 cursor-pointer transition-colors duration-300 font-semibold">
-            Pizzaiolo Truck
+            Pizzaiolo truck
           </span>{" "}
           © 2025. All rights reserved.
         </p>
