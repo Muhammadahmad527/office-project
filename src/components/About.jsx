@@ -8,14 +8,14 @@ const About = () => {
         <video
           src="/video.mp4"
           className="
-    w-full 
-    max-w-[260px]   /* small screens → narrower → smaller height */
-    md:max-w-[340px] /* medium screens → a bit larger */
-    lg:max-w-[420px] /* large screens → full size */
-    h-auto 
-    rounded-lg 
-    bg-black
-  "
+            w-full 
+            max-w-[260px]   /* small screens → narrower → smaller height */
+            md:max-w-[340px] /* medium screens → a bit larger */
+            lg:max-w-[420px] /* large screens → full size */
+            h-auto 
+            rounded-lg 
+            bg-black
+          "
           controls
           autoPlay
           loop
