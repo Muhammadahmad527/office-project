@@ -6,21 +6,23 @@ const About = () => {
       {/* Left side video (on desktop) */}
       <div className="w-full md:w-1/2 flex justify-center md:justify-end">
         <video
-          src="/video.mp4"
-          className="
-            w-full 
-            max-w-[260px]   /* small screens → narrower → smaller height */
-            md:max-w-[340px] /* medium screens → a bit larger */
-            lg:max-w-[420px] /* large screens → full size */
-            h-auto 
-            rounded-lg 
-            bg-black
-          "
-          controls
-          autoPlay
-          loop
-          muted
-        />
+  src="/video.mp4"
+  className="
+    w-full 
+    max-w-[260px]   /* small screens → narrower → smaller height */
+    md:max-w-[340px] /* medium screens → a bit larger */
+    lg:max-w-[420px] /* large screens → full size */
+    h-auto 
+    rounded-lg 
+    bg-black
+  "
+  controls
+  autoPlay
+  loop
+  muted
+  playsInline
+/>
+
 
       </div>
 
