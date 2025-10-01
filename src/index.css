@@ -5,6 +5,26 @@ body{
     overflow-y: auto;
     overflow-x: hidden;
 }
+/* index.css (add after Tailwind) */
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* caret shown only while typing */
+.typing-caret {
+  display: inline-block;
+  width: 0;
+  border-right: 3px solid #facc15; /* yellow caret */
+  margin-left: 2px;
+  vertical-align: bottom;
+  animation: blink .7s step-end infinite;
+}
+
+/* no caret (hidden) */
+.typing-caret.hidden {
+  border-right-color: transparent;
+  animation: none;
+}
 
 @keyframes toss {
   0%, 100% {

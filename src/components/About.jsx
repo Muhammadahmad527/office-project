@@ -6,8 +6,8 @@ const About = () => {
       {/* Left side video (on desktop) */}
       <div className="w-full md:w-1/2 flex justify-center md:justify-end">
         <video
-  src="/video.mp4"
-  className="
+          src="/video.mp4"
+          className="
     w-full 
     max-w-[260px]   /* small screens → narrower → smaller height */
     md:max-w-[340px] /* medium screens → a bit larger */
@@ -16,12 +16,12 @@ const About = () => {
     rounded-lg 
     bg-black
   "
-  controls
-  autoPlay
-  loop
-  muted
-  playsInline
-/>
+          controls
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
 
 
       </div>

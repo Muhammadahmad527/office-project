@@ -88,10 +88,10 @@ const Setup = () => {
           </div>
 
           {/* Right-side video */}
-         <div className="w-full md:w-1/2 flex justify-center md:justify-end">
-        <video
-          src="/pizza.mp4"
-          className="
+          <div className="w-full md:w-1/2 flex justify-center md:justify-end">
+            <video
+              src="/pizza.mp4"
+              className="
     w-full 
     max-w-[260px]   /* small screens → narrower → smaller height */
     md:max-w-[340px] /* medium screens → a bit larger */
@@ -100,15 +100,15 @@ const Setup = () => {
     rounded-lg 
     bg-black
   "
-          controls
-          autoPlay
-          loop
-          muted
-          playsInline
-        />
+              controls
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
 
 
-      </div>
+          </div>
 
 
         </div>
