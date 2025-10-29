@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 export default function Hero() {
-  const images = ["/container.jpg", "/woodfire3.avif", "/woodfire.webp"]; // public/
+  const images = ["/container.jpg", "/websitemain2.jpeg", "/websitemain.jpeg"]; // public/
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {

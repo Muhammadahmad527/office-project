@@ -1,11 +1,11 @@
 import Header from '../src/components/Header.jsx'
 import Hero from '../src/components/Hero.jsx'
 import About from '../src/components/About.jsx'
+import Story from '../src/components/Story.jsx'
 import Setup from '../src/components/Setup.jsx'
 import CustomCursor from '../src/components/Cursor.jsx'
 import Gallery from '../src/components/Gallery.jsx'
 import Loader from '../src/components/Loader.jsx'
-import Story from '../src/components/Story.jsx'
 import Review from '../src/components/Review.jsx'
 import Social from '../src/components/Social.jsx'
 import Footer from '../src/components/Footer.jsx'
@@ -21,11 +21,11 @@ function App() {
       <Header />
       <Hero />
       <About />
+      <Story />
       <Setup />
       <CustomCursor />
       <Gallery />
       <Loader />
-      <Story />
       <Review />
       <Social />
       <Footer />

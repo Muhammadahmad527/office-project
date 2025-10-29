@@ -72,9 +72,9 @@ export default function Review() {
 
   return (
     <div className="max-w-6xl mx-auto py-8 px-4 text-center">
-      <h2 className="text-3xl font-bold mb-2">Reviews</h2>
+      <h2 className="text-3xl font-bold mb-2">Google Reviews</h2>
       <div className="text-yellow-500 text-3xl mb-1">★★★★★</div>
-      <p className="mb-6 text-gray-600">Based on 43 reviews on <span className="font-semibold">Google</span></p>
+      <p className="mb-6 text-gray-600">Trusted by 43 Verified <span className="font-semibold">Clients</span></p>
 
       <div className="flex items-center justify-center gap-4">
         {/* Left Button */}

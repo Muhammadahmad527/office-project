@@ -3,14 +3,21 @@ import { FiCamera, FiX, FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 export default function Gallery() {
   const images = [
-    "/gallery.jpeg",
-    "/gallery2.jpeg",
-    "/gallery3.jpeg",
-    "/gallery4.jpeg",
-    "/gallery5.jpeg",
-    "/gallery6.jpeg",
-    "/gallery7.jpeg",
-    "/gallery8.jpeg",
+    "/section1.jpeg",
+    "/section2.jpeg",
+    "/section3.jpeg",
+    "/section4.jpeg",
+    "/section5.jpeg",
+    "/section6.jpeg",
+    "/section7.jpeg",
+    "/section8.jpeg",
+    "/section9.jpeg",
+    "/section10.jpeg",
+    "/section11.jpeg",
+    "/section12.jpeg",
+    "/section13.jpeg",
+    "/section14.jpeg",
+    "/section15.jpg",
   ];
 
   const [isOpen, setIsOpen] = useState(false);
@@ -36,7 +43,7 @@ export default function Gallery() {
       </h1>
 
       <section className="p-4 flex flex-col items-center">
-        <div className="grid gap-4 grid-cols-1 md:grid-cols-3 lg:grid-cols-4 max-w-5xl w-full">
+        <div className="grid gap-4 grid-cols-1 md:grid-cols-3 lg:grid-cols-5 max-w-5xl w-full">
           {images.map((src, index) => (
             <div
               key={index}
@@ -49,7 +56,7 @@ export default function Gallery() {
                 className="w-full h-full object-cover"
               />
               {/* Camera Icon */}
-              <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition">
+              <div className="absolute inset-0 flex items-center justify-center bg-neutral-800 bg-opacity-40 opacity-0 group-hover:opacity-70 transition">
                 <FiCamera className="text-white text-4xl" />
               </div>
             </div>

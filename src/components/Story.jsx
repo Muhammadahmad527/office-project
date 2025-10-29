@@ -1,9 +1,9 @@
 export default function OurStory() {
   return (
-    <section className="bg-white py-16 px-6 md:px-20">
+    <section className="bg-white py-16 px-6 md:px-40">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         {/* Left side */}
-        <div className="flex flex-col justify-center md:mb-22">
+        <div className="flex flex-col justify-center md:mb-3">
           {/* Icon + divider centered with image */}
           <div className="flex items-center mb-6">
             <div className="flex-1 border-t border-gray-300"></div>
