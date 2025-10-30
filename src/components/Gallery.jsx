@@ -65,7 +65,7 @@ export default function Gallery() {
 
         {/* Show More Button (Demo Only) */}
         <div className="mt-8">
-          <button className="bg-red-600 text-white font-medium px-6 py-2 rounded-full border border-transparent hover:bg-transparent hover:text-black hover:border-black transition-colors duration-400 ease-in-out">
+          <button className="bg-red-600 text-white cursor-pointer font-medium px-6 py-2 rounded-full border border-transparent hover:bg-transparent hover:text-black hover:border-black transition-colors duration-400 ease-in-out">
             Show More
           </button>
         </div>

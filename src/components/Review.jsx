@@ -72,7 +72,18 @@ export default function Review() {
 
   return (
     <div className="max-w-6xl mx-auto py-8 px-4 text-center">
-      <h2 className="text-3xl font-bold mb-2">Google Reviews</h2>
+      <h2 className="text-3xl font-bold mb-2 flex justify-center text-center w-full gap-1">
+        <span className="font-bold">
+          <span style={{ color: "#4285F4" }}>G</span>
+          <span style={{ color: "#DB4437" }}>o</span>
+          <span style={{ color: "#F4B400" }}>o</span>
+          <span style={{ color: "#4285F4" }}>g</span>
+          <span style={{ color: "#0F9D58" }}>l</span>
+          <span style={{ color: "#DB4437" }}>e</span>
+        </span>
+        <span>Reviews</span>
+      </h2>
+
       <div className="text-yellow-500 text-3xl mb-1">★★★★★</div>
       <p className="mb-6 text-gray-600">Trusted by 43 Verified <span className="font-semibold">Clients</span></p>
 

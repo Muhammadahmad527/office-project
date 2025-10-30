@@ -7,7 +7,7 @@ import CustomCursor from '../src/components/Cursor.jsx'
 import Gallery from '../src/components/Gallery.jsx'
 import Loader from '../src/components/Loader.jsx'
 import Review from '../src/components/Review.jsx'
-import Social from '../src/components/Social.jsx'
+// import Social from '../src/components/Social.jsx'
 import Footer from '../src/components/Footer.jsx'
 import Top from '../src/components/Top.jsx'
 // import ViewportBadge from '../src/components/ViewportBadge.jsx'
@@ -20,14 +20,14 @@ function App() {
     <>
       <Header />
       <Hero />
-      <About />
+      <div className='overflow-x-hidden'><About /></div>
       <Story />
       <Setup />
       <CustomCursor />
       <Gallery />
       <Loader />
       <Review />
-      <Social />
+      {/* <Social /> */}
       <Footer />
       <Top />
       {/* <ViewportBadge /> */}

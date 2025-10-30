@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
-
+*{
+  box-sizing: border-box;
+  
+}
 body{
     overflow-y: auto;
     overflow-x: hidden;
@@ -61,4 +64,52 @@ body{
 
 .animate-arm-right {
   animation: armRight 1.6s infinite ease-in-out;
+}
+
+
+
+
+/*new animaton*/
+
+.fade-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.appear {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: fadeLeft 1s ease-out forwards;
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(40px);
+  animation: fadeRight 1s ease-out forwards;
+}
+
+@keyframes fadeLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
