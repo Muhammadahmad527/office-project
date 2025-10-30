@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { FiCamera, FiX, FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 export default function Gallery() {
@@ -22,6 +22,29 @@ export default function Gallery() {
 
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  // ✅ Initialize refs as array
+  const refs = useRef([]);
+
+  useEffect(() => {
+    // ✅ Ensure this only runs in browser (Fix for Next.js SSR)
+    if (typeof window === "undefined") return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("opacity-100", "translate-y-0");
+            entry.target.classList.remove("opacity-0", "translate-y-6");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    refs.current.forEach((el) => el && observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
 
   const openLightbox = (index) => {
     setCurrentIndex(index);
@@ -47,7 +70,8 @@ export default function Gallery() {
           {images.map((src, index) => (
             <div
               key={index}
-              className="relative aspect-square overflow-hidden rounded-lg shadow-md group cursor-pointer"
+              ref={(el) => (refs.current[index] = el)}
+              className="relative aspect-square overflow-hidden rounded-lg shadow-md group cursor-pointer opacity-0 translate-y-6 transition-all duration-700 ease-out"
               onClick={() => openLightbox(index)}
             >
               <img
@@ -55,7 +79,6 @@ export default function Gallery() {
                 alt={`Gallery ${index + 1}`}
                 className="w-full h-full object-cover"
               />
-              {/* Camera Icon */}
               <div className="absolute inset-0 flex items-center justify-center bg-neutral-800 bg-opacity-40 opacity-0 group-hover:opacity-70 transition">
                 <FiCamera className="text-white text-4xl" />
               </div>
@@ -63,7 +86,6 @@ export default function Gallery() {
           ))}
         </div>
 
-        {/* Show More Button (Demo Only) */}
         <div className="mt-8">
           <button className="bg-red-600 text-white cursor-pointer font-medium px-6 py-2 rounded-full border border-transparent hover:bg-transparent hover:text-black hover:border-black transition-colors duration-400 ease-in-out">
             Show More
@@ -71,20 +93,13 @@ export default function Gallery() {
         </div>
       </section>
 
-      {/* Lightbox Modal */}
       {isOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
-          <button
-            onClick={closeLightbox}
-            className="absolute top-6 right-6 text-white text-4xl"
-          >
+          <button onClick={closeLightbox} className="absolute top-6 right-6 text-white text-4xl">
             <FiX />
           </button>
 
-          <button
-            onClick={prevImage}
-            className="absolute left-6 text-white text-5xl"
-          >
+          <button onClick={prevImage} className="absolute left-6 text-white text-5xl">
             <FiChevronLeft />
           </button>
 
@@ -94,14 +109,10 @@ export default function Gallery() {
             className="max-w-[90%] max-h-[80%] rounded-lg shadow-lg"
           />
 
-          <button
-            onClick={nextImage}
-            className="absolute right-6 text-white text-5xl"
-          >
+          <button onClick={nextImage} className="absolute right-6 text-white text-5xl">
             <FiChevronRight />
           </button>
         </div>
-        
       )}
     </div>
   );

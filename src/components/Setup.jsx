@@ -1,18 +1,40 @@
+import { useRef, useEffect } from "react";
 import { FaCalendarCheck, FaTruck, FaPizzaSlice, FaUsers } from "react-icons/fa";
 
 const Setup = () => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const items = sectionRef.current.querySelectorAll(".fade-up");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("appear");
+          }
+        });
+      },
+      { threshold: 0.25 } // show when 25% becomes visible
+    );
+
+    items.forEach((el) => observer.observe(el));
+  }, []);
+
   return (
-    <div className="px-6 md:px-12 lg:px-[70px] lg:pr-[110px]">
+    <div ref={sectionRef} className="px-6 md:px-12 lg:px-[70px] lg:pr-[110px] overflow-hidden">
       <section className="text-gray-600 body-font">
+
         {/* Heading */}
-        <h1 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-12">
+        <h1 className="fade-up text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-12">
           How Pizzaiolo Work
         </h1>
 
         {/* Wrapper */}
         <div className="container mx-auto flex flex-col md:flex-row items-start md:items-start px-4 md:px-5 py-12 lg:py-24 gap-12">
+
           {/* Left side steps */}
-          <div className="w-full md:w-1/2 lg:w-2/5 md:pr-10 md:py-6 lg:ml-8 mx-auto text-center lg:text-left">
+          <div className="fade-up w-full md:w-1/2 lg:w-2/5 md:pr-10 md:py-6 lg:ml-8 mx-auto text-center lg:text-left">
 
             {/* Step 1 */}
             <div className="flex relative pb-12">
@@ -88,33 +110,22 @@ const Setup = () => {
           </div>
 
           {/* Right-side video */}
-          <div className="w-full md:w-1/2 flex justify-center md:justify-end">
+          <div className="fade-up w-full md:w-1/2 flex justify-center md:justify-end">
             <video
               src="/pizza.mp4"
-              className="
-    w-full 
-    max-w-[260px]   /* small screens → narrower → smaller height */
-    md:max-w-[340px] /* medium screens → a bit larger */
-    lg:max-w-[420px] /* large screens → full size */
-    h-auto 
-    rounded-lg 
-    bg-black
-  "
+              className="w-full max-w-[260px] md:max-w-[340px] lg:max-w-[420px] h-auto rounded-lg bg-black"
               controls
               autoPlay
               loop
               muted
               playsInline
             />
-
-
           </div>
-
 
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
 export default Setup;
